@@ -4,6 +4,6 @@ import TheWelcome from '../components/TheWelcome.vue'
 
 <template>
   <main>
-    <TheWelcome />
+    <a href="http://www.google.com" target="_blank" >구글</a>
   </main>
 </template>
