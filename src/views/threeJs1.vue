@@ -6,7 +6,8 @@ import {
   BoxGeometry,
   MeshBasicMaterial,
   Mesh,
-  WebGLRenderer
+  WebGLRenderer,
+  AxesHelper
 } from 'three'
 
 const canvasRef = ref(null)
@@ -20,12 +21,14 @@ const setThree = () => {
   /* object */
   // object 는 여러 가지가 될 수 있습니다. primitive 지오메트리, import 된 모델, 파티클, 조명 등이 있을 수 있습니다.
   const geometry = new BoxGeometry(1, 1, 1)
-  const material = new MeshBasicMaterial({ color: 0xff0000 })
+  // const material = new MeshBasicMaterial({ color: 0xff0000 })
+  const material = new MeshBasicMaterial({ color: 0xff0000 , wireframe: true})
 
   // Mesh 삼각형 폴리곤 메시 기반 오브젝트를 나타내는 클래스
   // Mesh 생성자는 속성 2개만 있다. ( geometry : BufferGeometry, material : Material )
   const mesh = new Mesh(geometry, material)
   console.log('mesh', mesh)
+
   scene.add(mesh)
 
   // Sizes
@@ -46,7 +49,8 @@ const setThree = () => {
    *@param : far : 카메라 절두체 원평면입니다. 기본값은 2000입니다
    * */
   const camera = new PerspectiveCamera(75, sizes.width / sizes.height)
-  camera.position.z = 2
+  // camera.position.z = 3
+  camera.position.set(1,1,4)
   scene.add(camera)
 
   // Renderer
@@ -56,7 +60,6 @@ const setThree = () => {
   renderer.setSize(sizes.width, sizes.height)
   // .render ( scene : Object3D, camera : Camera )
   renderer.render(scene, camera)
-
   console.log('scene', scene)
 }
 
