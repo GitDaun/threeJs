@@ -22,7 +22,7 @@ const setThree = () => {
   // object 는 여러 가지가 될 수 있습니다. primitive 지오메트리, import 된 모델, 파티클, 조명 등이 있을 수 있습니다.
   const geometry = new BoxGeometry(1, 1, 1)
   // const material = new MeshBasicMaterial({ color: 0xff0000 })
-  const material = new MeshBasicMaterial({ color: 0xff0000 , wireframe: true})
+  const material = new MeshBasicMaterial({ color: 0xff0000, wireframe: true })
 
   // Mesh 삼각형 폴리곤 메시 기반 오브젝트를 나타내는 클래스
   // Mesh 생성자는 속성 2개만 있다. ( geometry : BufferGeometry, material : Material )
@@ -50,7 +50,7 @@ const setThree = () => {
    * */
   const camera = new PerspectiveCamera(75, sizes.width / sizes.height)
   // camera.position.z = 3
-  camera.position.set(1,1,4)
+  camera.position.set(1, 1, 4)
   scene.add(camera)
 
   // Renderer
