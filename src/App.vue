@@ -6,10 +6,10 @@ import { RouterLink, RouterView } from 'vue-router'
   <header>
     <div class="wrapper">
       <nav>
-        <RouterLink to="/">Lecture1</RouterLink>
-        <RouterLink to="/threeJs2">Lecture2</RouterLink>
-        <RouterLink to="/threeJs2_1">Lecture2_1</RouterLink>
-        <RouterLink to="/threeJs3">Lecture3</RouterLink>
+        <RouterLink to="/">Lecture1 Basic</RouterLink>
+        <RouterLink to="/threeJs2">Lecture2 Object</RouterLink>
+        <RouterLink to="/threeJs2_1">Lecture2_1 Scene Grouping</RouterLink>
+        <RouterLink to="/threeJs3">Lecture3 Animations</RouterLink>
         <RouterLink to="/threeJs4">Lecture4</RouterLink>
       </nav>
     </div>

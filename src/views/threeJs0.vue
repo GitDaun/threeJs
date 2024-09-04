@@ -6,18 +6,17 @@ import {
   BoxGeometry,
   MeshBasicMaterial,
   Mesh,
-  WebGLRenderer,
-  AxesHelper
+  WebGLRenderer
 } from 'three'
 
 const canvasRef = ref(null)
 const setThree = () => {
   const scene = new Scene()
 
+  // Object
   const geometry = new BoxGeometry(1, 1, 1)
   const material = new MeshBasicMaterial({ color: 0xff0000 })
   const mesh = new Mesh(geometry, material)
-
   scene.add(mesh)
 
   // Sizes
@@ -26,6 +25,7 @@ const setThree = () => {
     height: 600
   }
 
+  // Camera
   const camera = new PerspectiveCamera(75, sizes.width / sizes.height)
   camera.position.z = 3
   scene.add(camera)
